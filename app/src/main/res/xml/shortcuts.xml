@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="characters"
+        android:enabled="true"
+        android:icon="@drawable/baseline_face_24"
+        android:shortcutShortLabel="@string/character_short_label"
+        android:shortcutLongLabel="@string/character_long_label"
+        android:shortcutDisabledMessage="@string/character_disable_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zawmyat.anime_discovery"
+            android:targetClass="com.zawmyat.anime_discovery.presentation.base.MainActivity">
+            <extra android:name="shortcut_id" android:value="characters" />
+        </intent>
+
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="studios"
+        android:enabled="true"
+        android:icon="@drawable/studios_green"
+        android:shortcutShortLabel="@string/staff_short_label"
+        android:shortcutLongLabel="@string/studio_long_label"
+        android:shortcutDisabledMessage="@string/studio_disable_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zawmyat.anime_discovery"
+            android:targetClass="com.zawmyat.anime_discovery.presentation.base.MainActivity">
+            <extra android:name="shortcut_id" android:value="studios" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="staffs"
+        android:enabled="true"
+        android:icon="@drawable/staff_green"
+        android:shortcutShortLabel="@string/staff_short_label"
+        android:shortcutLongLabel="@string/staff_long_label"
+        android:shortcutDisabledMessage="@string/staff_disable_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zawmyat.anime_discovery"
+            android:targetClass="com.zawmyat.anime_discovery.presentation.base.MainActivity">
+            <extra android:name="shortcut_id" android:value="staffs" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="reviews"
+        android:enabled="true"
+        android:icon="@drawable/review_green"
+        android:shortcutShortLabel="@string/review_short_label"
+        android:shortcutLongLabel="@string/review_long_label"
+        android:shortcutDisabledMessage="@string/review_disable_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.zawmyat.anime_discovery"
+            android:targetClass="com.zawmyat.anime_discovery.presentation.base.MainActivity">
+            <extra android:name="shortcut_id" android:value="reviews" />
+        </intent>
+    </shortcut>
+
+</shortcuts>

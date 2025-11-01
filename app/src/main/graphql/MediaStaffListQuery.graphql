@@ -1,0 +1,18 @@
+query MediaStaffListQuery($mediaId: Int, $page: Int, $perPage: Int) {
+    Media(id: $mediaId) {
+        staff(page: $page, perPage: $perPage, sort: ROLE) {
+            edges {
+                node {
+                    id
+                    image {
+                        large
+                    }
+                    name {
+                        full
+                    }
+                }
+                role
+            }
+        }
+    }
+}

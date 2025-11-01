@@ -1,0 +1,25 @@
+query SortMediaQuery($page: Int, $perPage: Int, $sort: [MediaSort], $type: MediaType) {
+    Page(page: $page, perPage: $perPage) {
+        media(sort: $sort, type: $type, isAdult: false) {
+            id
+            format
+            title {
+                english
+                userPreferred
+            }
+            coverImage {
+                large
+            }
+            genres
+            startDate {
+                year
+            }
+            siteUrl
+            popularity
+            meanScore
+            favourites
+            averageScore
+            season
+        }
+    }
+}

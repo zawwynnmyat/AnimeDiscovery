@@ -1,0 +1,58 @@
+{
+  ConstraintSets : {
+    start : {
+      coverPhoto : {
+         width: "spread",
+         height: 250,
+         top: ['parent', 'top', 0],
+         start: ['parent', 'start', 0],
+         end: ['parent', 'end', 0],
+        translationY: 0,
+        alpha: 1,
+      },
+      navigationIcon : {
+        start: ['parent', 'start', 10],
+        top: ['parent', 'top', 10],
+        alpha: 1,
+      },
+      contentBox : {
+        width: "spread",
+        height: "spread",
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top', 200],
+        bottom: ['parent', 'bottom'],
+        custom: {
+          borderRadius : 10
+        }
+      }
+    },
+    end : {
+      coverPhoto : {
+        width: "spread",
+        height: 250,
+        top: ['parent', 'top'],
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        translationY: -250,
+        alpha: 0.3,
+      },
+      navigationIcon : {
+        start: ['parent', 'start', 10],
+        top: ['parent', 'top', 10],
+        alpha: 0,
+      },
+      contentBox : {
+        width: "spread",
+        height: "spread",
+        start: ['parent', 'start'],
+        end: ['parent', 'end'],
+        top: ['parent', 'top'],
+        bottom: ['parent', 'bottom'],
+        custom: {
+          borderRadius : 0
+        }
+      }
+    }
+  }
+}

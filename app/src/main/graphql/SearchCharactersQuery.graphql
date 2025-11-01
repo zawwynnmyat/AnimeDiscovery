@@ -1,0 +1,16 @@
+query SearchCharactersQuery($page: Int, $perPage: Int, $search: String, $sort: [CharacterSort] = FAVOURITES_DESC) {
+    Page(page: $page, perPage: $perPage) {
+        characters(search: $search, sort: $sort) {
+            name {
+                full
+            }
+            favourites
+            gender
+            image {
+                large
+            }
+            id
+            age
+        }
+    }
+}

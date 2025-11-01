@@ -1,0 +1,52 @@
+query StaffDetailQuery($staffId: Int) {
+    Staff(id: $staffId) {
+        favourites
+        description(asHtml: true)
+        name {
+            full
+            native
+        }
+        age
+        bloodType
+        gender
+        homeTown
+        image {
+            large
+        }
+        id
+        languageV2
+        siteUrl
+        characters(page: 1, perPage: 15) {
+            edges {
+                node {
+                    id
+                    name {
+                        full
+                    }
+                    image {
+                        large
+                    }
+                }
+
+            }
+        }
+        staffMedia(page: 1, perPage: 15, sort: POPULARITY_DESC) {
+            nodes {
+                id
+                format
+                title {
+                    english
+                    userPreferred
+                }
+                coverImage {
+                    large
+                }
+                siteUrl
+                popularity
+                meanScore
+                favourites
+                averageScore
+            }
+        }
+    }
+}

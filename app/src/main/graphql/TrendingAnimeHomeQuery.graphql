@@ -1,0 +1,29 @@
+query TrendingAnimeHomeQuery($page: Int, $perPage: Int) {
+    Page(page: $page, perPage: $perPage) {
+        media(type: ANIME, sort:[TRENDING_DESC], isAdult: false) {
+            bannerImage
+            favourites
+            genres
+            description(asHtml: false)
+            coverImage {
+                large
+            }
+            title {
+                english
+            }
+            studios {
+                edges {
+                    node {
+                        name
+                    }
+                }
+            }
+            startDate {
+                year
+            }
+            averageScore
+            id
+            format
+        }
+    }
+}

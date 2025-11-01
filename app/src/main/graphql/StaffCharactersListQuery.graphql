@@ -1,0 +1,26 @@
+query StaffCharactersListQuery($staffId: Int,  $page: Int, $perPage: Int) {
+    Staff(id: $staffId) {
+        characters(sort: ROLE, page: $page, perPage: $perPage) {
+            edges {
+                node {
+                    id
+                    image {
+                        large
+                    }
+                    name {
+                        full
+                    }
+                }
+                voiceActors {
+                    id
+                    image {
+                        large
+                    }
+                    name {
+                        full
+                    }
+                }
+            }
+        }
+    }
+}

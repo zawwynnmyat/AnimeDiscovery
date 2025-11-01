@@ -1,0 +1,162 @@
+{
+  ConstraintSets : {
+     start : {
+       appBar : {
+         width: "spread",
+         height: 90,
+         top: ['parent', 'top', 0],
+         end: ['parent', 'end', 0],
+         start: ['parent', 'start', 0],
+       },
+       banner : {
+         width: "spread",
+         height: 180,
+         top: ['parent', 'top', 0],
+         start: ['parent', 'start', 0],
+         end: ['parent', 'end', 0],
+         translationY: 0,
+         alpha: 1,
+       },
+       bannerFilter : {
+         width: "spread",
+         height: 180,
+         top: ['parent', 'top', 0],
+         start: ['parent', 'start', 0],
+         end: ['parent', 'end', 0],
+         translationY: 0,
+         alpha: 1
+       },
+       coverPhoto: {
+         width: 115,
+         height: 175,
+         top: ['banner', 'bottom', -20],
+         start: ['parent', 'start', 16],
+         custom : {
+            borderRadius : 8
+         }
+       },
+       title: {
+         width: "spread",
+         top: ['banner', 'bottom', -20],
+         start: ['coverPhoto', 'end', 16],
+         end: ['parent', 'end', 16],
+       },
+       formatIcon : {
+         top: ['title', 'bottom', 10],
+         start: ['coverPhoto', 'end', 16],
+       },
+       formatText : {
+         top: ['title', 'bottom', 10],
+         start: ['formatIcon', 'end', 10],
+       },
+       favoriteIcon : {
+         top: ['formatIcon', 'bottom', 10],
+         start: ['coverPhoto', 'end', 16],
+       },
+       favoriteText : {
+         top: ['formatText', 'bottom', 10],
+         start: ['favoriteIcon', 'end', 10],
+       },
+       yearIcon : {
+         top: ['favoriteIcon', 'bottom', 10],
+         start: ['coverPhoto', 'end', 16],
+       },
+       yearText : {
+         top: ['favoriteIcon', 'bottom', 5],
+         start: ['yearIcon', 'end', 10],
+       },
+       content : {
+         width: "spread",
+         height: "spread",
+         start: ['parent', 'start', 16],
+         top: ['coverPhoto', 'bottom', 15],
+         end: ['parent', 'end', 16],
+         bottom: ['parent', 'bottom', 0],
+       }
+     },
+     end : {
+       appBar : {
+         width: "spread",
+         height: 50,
+         top: ['parent', 'top', 0],
+         end: ['parent', 'end', 0],
+         start: ['parent', 'start', 0],
+         visibility: 'gone',
+       },
+       banner : {
+         width: "spread",
+         height: 0,
+         top: ['parent', 'top', 0],
+         start: ['parent', 'start', 0],
+         end: ['parent', 'end', 0],
+       },
+       bannerFilter : {
+         width: "spread",
+         height: 0,
+         top: ['parent', 'top', 0],
+         start: ['parent', 'start', 0],
+         end: ['parent', 'end', 0],
+       },
+       coverPhoto: {
+         width: 70,
+         height: 70,
+         top: ['parent', 'top', 15],
+         start: ['parent', 'start', 16],
+         custom: {
+           borderRadius : 70
+         }
+       },
+       title: {
+         width: "spread",
+         top: ['appBar', 'bottom', 5],
+         start: ['coverPhoto', 'end', 16],
+         end: ['parent', 'end', 16],
+         bottom: ['coverPhoto', 'bottom', 0],
+       },
+       formatIcon : {
+         top: ['coverPhoto', 'bottom', 15],
+         start: ['parent', 'start', 16],
+         end: ['favoriteIcon', 'start', 0],
+         width: "spread",
+       },
+       formatText: {
+         top: ['formatIcon', 'bottom', 10],
+         start: ['formatIcon', 'start'],
+         end: ['formatIcon', 'end'],
+         width: "spread"
+       },
+       favoriteIcon : {
+         top: ['coverPhoto', 'bottom', 15],
+         start: ['formatIcon', 'end'],
+         end: ['yearIcon', 'start'],
+         width: "spread"
+       },
+       favoriteText: {
+         top: ['favoriteIcon', 'bottom', 10],
+         start: ['favoriteIcon', 'start'],
+         end: ['favoriteIcon', 'end'],
+         width: "spread"
+       },
+       yearIcon : {
+         top: ['coverPhoto', 'bottom', 15],
+         start: ['favoriteIcon', 'end'],
+         end: ['parent', 'end', 16],
+         width: "spread"
+       },
+       yearText: {
+         top: ['yearIcon', 'bottom', 10],
+         start: ['yearIcon', 'start'],
+         end: ['yearIcon', 'end'],
+         width: "spread"
+       },
+       content : {
+         width: "spread",
+         height: "spread",
+         start: ['parent', 'start', 16],
+         end: ['parent', 'end', 16],
+         top: ['favoriteText', 'bottom', 15],
+         bottom: ['parent', 'bottom', 0],
+       }
+     }
+  }
+}

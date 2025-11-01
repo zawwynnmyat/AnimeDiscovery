@@ -1,0 +1,24 @@
+query TagMatchQuery($tag: String, $page: Int, $perPage: Int) {
+    Page(page: $page, perPage: $perPage) {
+        media(tag: $tag, isAdult: false, sort: POPULARITY_DESC) {
+            id
+            format
+            title {
+                english
+                userPreferred
+            }
+            coverImage {
+                large
+            }
+            genres
+            startDate {
+                year
+            }
+            siteUrl
+            popularity
+            meanScore
+            favourites
+            averageScore
+        }
+    }
+}

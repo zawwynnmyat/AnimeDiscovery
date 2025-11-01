@@ -1,0 +1,30 @@
+query ReviewsQuery($page: Int, $perPage: Int, $sort: [ReviewSort]) {
+    Page(page: $page, perPage: $perPage) {
+        reviews(sort: $sort) {
+            id
+            ratingAmount
+            rating
+            score
+            user {
+                avatar {
+                    medium
+                }
+                name
+
+            }
+            userRating
+            media {
+                title {
+                    english
+                    romaji
+                    native
+                }
+                bannerImage
+                format
+            }
+            summary
+            createdAt
+            siteUrl
+        }
+    }
+}

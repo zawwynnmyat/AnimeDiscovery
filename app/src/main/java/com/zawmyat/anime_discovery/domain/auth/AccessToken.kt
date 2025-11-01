@@ -1,0 +1,8 @@
+package com.zawmyat.anime_discovery.domain.auth
+
+import com.google.gson.annotations.SerializedName
+
+data class AccessToken(
+    @SerializedName("access_token")
+    val accessToken: String
+)

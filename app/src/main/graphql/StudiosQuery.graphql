@@ -1,0 +1,9 @@
+query StudiosQuery($page: Int, $perPage: Int, $sort: [StudioSort]) {
+    Page(page: $page, perPage: $perPage) {
+        studios(sort: $sort) {
+            favourites
+            name
+            id
+        }
+    }
+}

@@ -1,0 +1,19 @@
+query StaffsQuery($perPage: Int, $page: Int, $sort: [StaffSort] = FAVOURITES_DESC) {
+    Page(perPage: $perPage, page: $page) {
+        staff(sort: $sort) {
+            name {
+                full
+            }
+            age
+            bloodType
+            favourites
+            gender
+            homeTown
+            image {
+                large
+            }
+            id
+
+        }
+    }
+}

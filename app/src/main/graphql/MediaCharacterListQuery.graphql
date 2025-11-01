@@ -1,0 +1,27 @@
+query MediaCharacterListQuery($mediaId: Int, $page: Int, $perPage: Int) {
+    Media(id: $mediaId) {
+        characters(page: $page, perPage: $perPage, sort: ROLE) {
+            edges {
+                role
+                node {
+                    id
+                    image {
+                        large
+                    }
+                    name {
+                        full
+                    }
+                }
+                voiceActors {
+                    name {
+                        full
+                    }
+                    image {
+                        large
+                    }
+                    id
+                }
+            }
+        }
+    }
+}

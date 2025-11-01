@@ -1,0 +1,25 @@
+query SeasonalMediaQuery($season: MediaSeason, $type: MediaType, $page: Int, $perPage: Int, $seasonYear: Int) {
+    Page(page: $page, perPage: $perPage) {
+        media(season: $season, type: $type, sort: POPULARITY_DESC, isAdult: false, seasonYear: $seasonYear) {
+            id
+            format
+            title {
+                english
+                userPreferred
+            }
+            coverImage {
+                large
+            }
+            genres
+            startDate {
+                year
+            }
+            siteUrl
+            popularity
+            meanScore
+            favourites
+            averageScore
+            season
+        }
+    }
+}

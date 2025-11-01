@@ -1,0 +1,47 @@
+query SearchMediaQuery($page: Int, $perPage: Int, $search: String, $type: MediaType = ANIME) {
+    Page(page: $page, perPage: $perPage) {
+        media(
+            sort:[TRENDING_DESC],
+            isAdult: false,
+            search: $search,
+            type: $type
+        ) {
+            id
+            bannerImage
+            favourites
+            genres
+            description(asHtml: false)
+            coverImage {
+                large
+            }
+            title {
+                english
+            }
+            studios {
+                edges {
+                    node {
+                        name
+                    }
+                }
+            }
+            startDate {
+                year
+            }
+            rankings {
+                rank
+            }
+            averageScore
+            id
+            staff {
+                edges {
+                    node {
+                        name {
+                            full
+                        }
+                    }
+                }
+            }
+            format
+        }
+    }
+}

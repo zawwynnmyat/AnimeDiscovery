@@ -1,0 +1,31 @@
+query TrendingMangaHomeQuery($page: Int, $perPage: Int) {
+    Page(page: $page, perPage: $perPage) {
+        media(type: MANGA, sort:[TRENDING_DESC], isAdult: false) {
+            bannerImage
+            favourites
+            genres
+            format
+            description(asHtml: false)
+            coverImage {
+                large
+            }
+            title {
+                english
+            }
+            startDate {
+                year
+            }
+            averageScore
+            id
+            staff {
+                edges {
+                    node {
+                        name {
+                            full
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

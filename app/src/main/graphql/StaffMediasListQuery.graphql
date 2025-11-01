@@ -1,0 +1,25 @@
+query StaffMediasListQuery($staffId: Int, $page: Int, $perPage: Int) {
+    Staff(id: $staffId) {
+        staffMedia(sort: POPULARITY_DESC, page: $page, perPage: $perPage) {
+            nodes {
+                id
+                format
+                startDate {
+                    year
+                }
+                title {
+                    english
+                    userPreferred
+                }
+                coverImage {
+                    large
+                }
+                siteUrl
+                popularity
+                meanScore
+                favourites
+                averageScore
+            }
+        }
+    }
+}

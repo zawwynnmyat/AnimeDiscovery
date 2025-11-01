@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Anime Discovery</string>
+    <string name="character_short_label">Characters</string>
+    <string name="character_long_label">Explore Characters</string>
+    <string name="character_disable_message">Characters shortcut is currently unavailable.</string>
+    <string name="studio_short_label">Studios</string>
+    <string name="studio_long_label">Explore Studios</string>
+    <string name="studio_disable_message">Studios shortcut is currently unavailable.</string>
+    <string name="staff_short_label">Staffs</string>
+    <string name="staff_long_label">Explore Staffs</string>
+    <string name="staff_disable_message">Staffs shortcut is currently unavailable.</string>
+    <string name="review_short_label">Reviews</string>
+    <string name="review_long_label">Explore Reviews</string>
+    <string name="review_disable_message">Reviews shortcut is currently unavailable.</string>
+</resources>

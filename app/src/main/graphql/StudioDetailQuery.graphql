@@ -1,0 +1,23 @@
+query StudioDetailQuery($studioId: Int) {
+    Studio(id: $studioId) {
+        favourites
+        id
+        name
+        siteUrl
+        media(sort: POPULARITY_DESC, page: 1, perPage: 50) {
+            nodes {
+                id
+                popularity
+                averageScore
+                format
+                title {
+                    english
+                    userPreferred
+                }
+                coverImage {
+                    large
+                }
+            }
+        }
+    }
+}

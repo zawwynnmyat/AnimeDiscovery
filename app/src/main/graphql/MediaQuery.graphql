@@ -1,0 +1,172 @@
+query MediaQuery($mediaId: Int) {
+
+    Media(id: $mediaId) {
+
+        bannerImage
+        averageScore
+        title {
+            english
+            native
+            romaji
+            userPreferred
+        }
+        favourites
+        volumes
+        updatedAt
+        type
+        trailer {
+            id
+            site
+            thumbnail
+        }
+        stats {
+            scoreDistribution {
+                amount
+                score
+            }
+            statusDistribution {
+                amount
+                status
+            }
+        }
+        studios {
+            edges {
+                id
+                node {
+                    siteUrl
+                    name
+                    isFavourite
+                    isAnimationStudio
+                }
+            }
+            nodes {
+                favourites
+                isFavourite
+                isAnimationStudio
+                id
+                name
+                siteUrl
+            }
+        }
+        synonyms
+        siteUrl
+        seasonYear
+        season
+        format
+        genres
+        id
+        chapters
+        tags {
+            category
+            name
+            description
+            id
+            rank
+            userId
+            isMediaSpoiler
+            isAdult
+        }
+        trending
+        status
+        externalLinks {
+            color
+            icon
+            id
+            isDisabled
+            language
+            notes
+            site
+            siteId
+            url
+            type
+        }
+        coverImage {
+            large
+        }
+        description
+        characters(sort: [ROLE], page: 1, perPage: 25) {
+            nodes {
+                id
+                image {
+                    large
+                }
+                name {
+                    full
+                }
+            }
+            edges {
+                role
+            }
+        }
+        episodes
+        duration
+        startDate {
+            day
+            month
+            year
+        }
+        endDate {
+            day
+            month
+            year
+        }
+        meanScore
+        favourites
+        popularity
+        countryOfOrigin
+        staff(page: 1, perPage: 25) {
+            edges {
+                role
+                node {
+                    id
+                    name {
+                        full
+                    }
+                    image {
+                        large
+                    }
+                }
+            }
+        }
+        recommendations(sort: RATING_DESC, page: 1, perPage: 10) {
+            edges {
+                node {
+                    mediaRecommendation {
+                        title {
+                            english
+                        }
+                        coverImage {
+                            large
+                        }
+                        format
+                        favourites
+                        popularity
+                        genres
+                        id
+                        averageScore
+                        startDate {
+                            year
+                        }
+                    }
+                }
+            }
+        }
+        relations {
+            edges {
+                node {
+                    id
+                    title {
+                        english
+                        userPreferred
+                    }
+                    coverImage {
+                        large
+                    }
+                    format
+                }
+                relationType
+            }
+        }
+    }
+
+}

@@ -1,0 +1,32 @@
+query ReviewDetailsQuery($reviewId: Int) {
+    Review(id: $reviewId) {
+        id
+        body
+        createdAt
+        media {
+            type
+            title {
+                english
+                native
+                romaji
+            }
+            bannerImage
+        }
+        mediaId
+        mediaType
+        rating
+        ratingAmount
+        score
+        siteUrl
+        summary
+        userId
+        userRating
+        user {
+            avatar {
+                large
+            }
+            id
+            name
+        }
+    }
+}

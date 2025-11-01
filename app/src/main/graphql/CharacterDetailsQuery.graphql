@@ -1,0 +1,40 @@
+query CharacterDetailsQuery($characterId: Int) {
+    Character(id: $characterId) {
+        name {
+            full
+            native
+        }
+        age
+        bloodType
+        description
+        favourites
+        gender
+        image {
+            large
+        }
+        siteUrl
+        media(page: 1, perPage: 15) {
+            edges {
+                characterRole
+                node {
+                    bannerImage
+                    id
+                    favourites
+                    format
+                    meanScore
+                    popularity
+                    coverImage {
+                        large
+                    }
+                    title {
+                        english
+                        userPreferred
+                    }
+
+                }
+            }
+        }
+
+
+    }
+}

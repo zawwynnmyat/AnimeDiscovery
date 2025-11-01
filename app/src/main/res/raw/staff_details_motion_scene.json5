@@ -1,0 +1,117 @@
+{
+  ConstraintSets : {
+    start : {
+      appBar : {
+        start: ['parent', 'start', 0],
+        top: ['parent', 'top', 0],
+        end: ['parent', 'end', 0],
+      },
+      avatar: {
+        width: 120,
+        height: 175,
+        start: ['parent', 'start', 16],
+        top: ['appBar', 'bottom', 0],
+        custom: {
+          borderRadius: 6
+        }
+      },
+      name: {
+        width: "spread",
+        start: ['avatar', 'end', 12],
+        top: ['appBar', 'bottom', 0],
+        end: ['parent', 'end', 12],
+      },
+      nativeName: {
+        width: "spread",
+        start: ['avatar', 'end', 12],
+        top: ['name', 'bottom', 5],
+      },
+      favIcon: {
+        start: ['avatar', 'end', 12],
+        top: ['nativeName', 'bottom', 10],
+      },
+      favText : {
+        start: ['favIcon', 'end', 10],
+        top: ['nativeName', 'bottom', 10],
+      },
+      genderIcon : {
+        start: ['avatar', 'end', 12],
+        top: ['favIcon', 'bottom', 10],
+      },
+      genderText : {
+        start: ['genderIcon', 'end', 10],
+        top: ['favIcon', 'bottom', 10],
+      },
+      genderBackgroundBox : {
+        alpha: 0.0,
+      },
+      content: {
+        width: "spread",
+        height: "spread",
+        top: ['avatar', 'bottom', 16],
+        start: ['parent', 'start', 12],
+        end: ['parent', 'end', 12],
+        bottom: ['parent', 'bottom', 0],
+      }
+    },
+    end : {
+      appBar : {
+        start: ['parent', 'start', 0],
+        top: ['parent', 'top', 0],
+        end: ['parent', 'end', 0],
+      },
+      avatar: {
+        width: 90,
+        height: 90,
+        start: ['parent', 'start'],
+        end: ['parent', 'end', 0],
+        top: ['appBar', 'bottom', 0],
+        custom: {
+          borderRadius: 90
+        }
+      },
+      name: {
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['avatar', 'bottom', 10],
+      },
+      nativeName: {
+        start: ['parent', 'start', 16],
+        end: ['parent', 'end', 16],
+        top: ['name', 'bottom', 5],
+      },
+      favIcon: {
+        end: ['favText', 'start', 10],
+        top: ['parent', 'top', 14],
+      },
+      favText : {
+        end: ['parent', 'end', 16],
+        top: ['parent', 'top', 14],
+      },
+      genderIcon : {
+        start: ['avatar', 'end', -30],
+        bottom: ['avatar', 'top', -20],
+      },
+      genderText : {
+        start: ['genderIcon', 'end', 10],
+        top: ['favIcon', 'bottom', 10],
+        visibility: 'gone',
+      },
+      genderBackgroundBox : {
+        width: 25,
+        height: 25,
+        alpha: 1.0,
+        start: ['avatar', 'end', -30],
+        bottom: ['avatar', 'top', -20]
+      },
+      content: {
+        width: "spread",
+        height: "spread",
+        top: ['nativeName', 'bottom', 16],
+        start: ['parent', 'start', 12],
+        end: ['parent', 'end', 12],
+        bottom: ['parent', 'bottom', 0],
+      }
+    }
+  }
+}

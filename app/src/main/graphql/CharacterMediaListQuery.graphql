@@ -1,0 +1,28 @@
+query CharacterMediaListQuery($characterId: Int, $page: Int, $perPage: Int) {
+    Character(id: $characterId, sort: ROLE) {
+        media(sort: POPULARITY_DESC, page: $page, perPage: $perPage) {
+            edges {
+                characterRole
+                node {
+                    startDate {
+                        year
+                    }
+                    bannerImage
+                    id
+                    averageScore
+                    favourites
+                    format
+                    meanScore
+                    popularity
+                    coverImage {
+                        large
+                    }
+                    title {
+                        english
+                        userPreferred
+                    }
+                }
+            }
+        }
+    }
+}
